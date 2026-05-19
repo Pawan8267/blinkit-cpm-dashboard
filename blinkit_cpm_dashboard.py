@@ -7,7 +7,6 @@ from google.oauth2 import service_account
 
 # ================= CONFIG =================
 
-SERVICE_ACCOUNT_FILE = r"C:\Users\Pawan gangwar\Downloads\quick-commerce-ads-5b7987d2e442.json"
 PROJECT_ID = "quick-commerce-ads"
 TABLE_ID = "quick-commerce-ads.warehouse.blinkit_ads_intelligence"
 
@@ -20,6 +19,36 @@ st.set_page_config(
     page_icon="📊"
 )
 
+# Hide Streamlit branding
+
+st.markdown("""
+<style>
+
+/* Hide Streamlit menu */
+#MainMenu {
+    visibility: hidden;
+}
+
+/* Hide footer */
+footer {
+    visibility: hidden;
+}
+
+/* Hide header */
+header {
+    visibility: hidden;
+}
+
+/* Hide GitHub / Fork button */
+.viewerBadge_container__1QSob,
+.styles_viewerBadge__1yB5_,
+.viewerBadge_link__1S137,
+.stDeployButton {
+    display: none !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
 
 # ================= STYLE =================
 
