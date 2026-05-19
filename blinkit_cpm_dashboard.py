@@ -49,8 +49,8 @@ st.markdown("""
 
 @st.cache_data(ttl=300)
 def load_data():
-    credentials = service_account.Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE
+    credentials = service_account.Credentials.from_service_account_info(
+        st.secrets["gcp_service_account"]
     )
 
     client = bigquery.Client(
